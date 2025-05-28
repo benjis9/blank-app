@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 def render_html_table(data):
     html = """
@@ -23,7 +24,7 @@ def render_html_table(data):
             <th>Score</th><th>Rationale</th>
         </tr>
     """
-    for i in range(1, 4):  # We're assuming 3 rows of data for this test
+    for i in range(1, 4):
         row = data[str(i)]
         def score_class(score):
             return f"score-{str(score).replace('.', '_')}"  # Generate class based on score value
@@ -40,10 +41,9 @@ def render_html_table(data):
         </tr>
         """
     html += "</table>"
-
-    st.text(html)
     
-    st.markdown(html, unsafe_allow_html=True)
+    # Use st.components.v1.html() to render larger HTML content
+    components.html(html, height=600)  # Adjust the height as necessary
 
 # Test data structure (mock data)
 test_data = {
