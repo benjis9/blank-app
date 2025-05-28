@@ -43,13 +43,13 @@ def render_html_table(data):
     html += "</table>"
     
     # Use st.components.v1.html() to render larger HTML content
-    components.html(html, height=600)  # Adjust the height as necessary
+    components.html(html, height=400)  # Adjust the height as necessary
 
 # Test data structure (mock data)
 test_data = {
-    '1': {'Team': {'score': 1, 'rationale': 'Strong team with experienced leadership.'},
+    '1': {'Team': {'score': 1, 'rationale': 'Adding random text to just see how it looks with these strings actually being quite long. Strong team with experienced leadership.'},
           'Business Model': {'score': 0.5, 'rationale': 'Model has potential, but unclear revenue model.'},
-          'Traction': {'score': 0, 'rationale': 'Limited traction, few users engaged.'}},
+          'Traction': {'score': 0, 'rationale': 'lol, maybe this one can be decently long/short? Limited traction, few users engaged.'}},
     '2': {'Team': {'score': 0.5, 'rationale': 'Some experience, but lack of depth in the market.'},
           'Business Model': {'score': 1, 'rationale': 'Clear revenue model, scalable business.'},
           'Traction': {'score': 0.5, 'rationale': 'Some growth, but not enough to sustain long-term.'}},
