@@ -40,6 +40,9 @@ def render_html_table(data):
         </tr>
         """
     html += "</table>"
+
+    st.text(html)
+    
     st.markdown(html, unsafe_allow_html=True)
 
 # Test data structure (mock data)
