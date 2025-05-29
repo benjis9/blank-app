@@ -24,7 +24,7 @@ def render_html_table(data):
             <th>Score</th><th>Rationale</th>
         </tr>
     """
-    for i in range(1, 4):
+    for i in range(1, 5):
         row = data[str(i)]
         def score_class(score):
             return f"score-{str(score).replace('.', '_')}"  # Generate class based on score value
@@ -47,16 +47,64 @@ def render_html_table(data):
 
 # Test data structure (mock data)
 test_data = {
-    '1': {'Team': {'score': 1, 'rationale': 'Adding random text to just see how it looks with these strings actually being quite long. Strong team with experienced leadership.'},
-          'Business Model': {'score': 0.5, 'rationale': 'Model has potential, but unclear revenue model.'},
-          'Traction': {'score': 0, 'rationale': 'lol, maybe this one can be decently long/short? Limited traction, few users engaged.'}},
-    '2': {'Team': {'score': 0.5, 'rationale': 'Some experience, but lack of depth in the market.'},
-          'Business Model': {'score': 1, 'rationale': 'Clear revenue model, scalable business.'},
-          'Traction': {'score': 0.5, 'rationale': 'Some growth, but not enough to sustain long-term.'}},
-    '3': {'Team': {'score': 0, 'rationale': 'Inexperienced team with limited industry knowledge.'},
-          'Business Model': {'score': 0, 'rationale': 'Business model is unclear, lacks clarity.'},
-          'Traction': {'score': 1, 'rationale': 'Strong traction with growing customer base and partnerships.'}}
+  "1": {
+    "Team": {
+      "score": 1,
+      "rationale": "The founding team consists of three experienced co-founders with complementary skill sets, including a strong advisory board. All founders have worked in the tech space for over 10 years and have prior startup experience."
+    },
+    "Business Model": {
+      "score": 1,
+      "rationale": "The business operates a B2B SaaS model, which is highly scalable. There are clear opportunities for expanding the product offering and upselling additional services to current customers."
+    },
+    "Traction": {
+      "score": 1,
+      "rationale": "The company has 1,000 paying customers and shows strong month-over-month revenue growth of 20%. Retention rates are high with 85% of customers renewing their subscriptions after one year."
+    }
+  },
+  "2": {
+    "Team": {
+      "score": 0.5,
+      "rationale": "The team has a founder with relevant experience, but lacks a strong co-founder or advisory board. The founder has a background in finance but limited experience in the core industry of e-commerce."
+    },
+    "Business Model": {
+      "score": 0.5,
+      "rationale": "The business model is somewhat scalable but faces challenges due to high capital expenditure for infrastructure. It has some room for product expansion but the growth may be limited by operational costs."
+    },
+    "Traction": {
+      "score": 0.5,
+      "rationale": "The business has a small user base, and while there has been steady growth, the customer retention rate is only 60%. There is limited data on repeat purchases or long-term engagement."
+    }
+  },
+  "3": {
+    "Team": {
+      "score": 0,
+      "rationale": "The team consists of a solo founder with minimal industry experience. The founder has no prior startup experience and lacks an advisory board or experienced co-founders."
+    },
+    "Business Model": {
+      "score": 0,
+      "rationale": "The business model is not scalable and requires significant capital investment. The company relies heavily on physical inventory and logistics, which makes expansion costly and difficult."
+    },
+    "Traction": {
+      "score": 0,
+      "rationale": "The company has no paying customers and is still in the early stages of product development. There are no metrics or KPIs indicating significant growth or market interest."
+    }
+  },
+  "4": {
+    "Team": {
+      "score": 1,
+      "rationale": "The founding team consists of two highly experienced entrepreneurs who previously built a successful startup. They have complementary skills, with one focusing on technology and the other on business development."
+    },
+    "Business Model": {
+      "score": 1,
+      "rationale": "The business model is highly scalable with a strong B2B component. There are clear opportunities for product expansion, and the business is well-positioned to take advantage of growing demand in its target market."
+    },
+    "Traction": {
+      "score": 0.5,
+      "rationale": "The company has some initial customers, but growth has been slow. The customer base is still in the early stages, and there is limited data to indicate strong retention or engagement. However, the company is seeing steady growth in revenue."
+    }
+  }
 }
+
 
 # Call the function to display the table with the test data
 render_html_table(test_data)
