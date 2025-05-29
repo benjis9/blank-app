@@ -43,7 +43,7 @@ def render_html_table(data):
     html += "</table>"
     
     # Use st.components.v1.html() to render larger HTML content
-    components.html(html, height=2400, width=800)
+    components.html(html, height=2400, width=1200)
 
 # Test data structure (mock data)
 test_data = {
